@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 448px;
+    height: 500px;
+    padding: 48px 40px 36px;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
+}
+
+.box .logo 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.box h1 {
+    margin: 0px 0 -0.125rem;
+    padding: 16px 0px 0px;
+    text-align: center;
+    color: #202124;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box h2 {
+    margin: 0px 0 -0.125rem;
+    padding: 8px 0px 0px;
+    text-align: center;
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.emailbutton {
+    display: flex;
+    width: 365px;
+    height: 34.42px;
+    padding: 9px 0px 3px;
+}
+
+.email {
+    width:148.78px;
+    height:20px;
+    background: none;
+    border:none;
+    outline: none;
+    color: #1A73E8;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.know {
+    display: flex;
+    width: 368px;
+    height: 54.84px;
+
+    padding: 9px 0px 3px;
+
+    font-size: 15px;
+}
+
+.know .p {
+    color: #5F6368;
+}
+
+.know .ara {
+    width: 110.75px;
+    height: 21.42px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #1A73E8;
+    cursor: pointer;
+}
+
+.Id {
+    display: flex;
+    width: 194.94px;
+    height: 48px;
+}
+
+.make {
+    font-size: 14px;
+    color: #1A73E8;
+    outline: none;
+    border:none;
+    background: none;
+    cursor: pointer;
+}
+
+.next {
+    width: 181.08px;
+    height: 48px;
+}
+
+.nextbutton {
+    width: 76.34px;
+    height: 48px;
+    background-color: #1A73E8;
+    color: white;
+    font-size:14px;
+    outline: #1A73E8;
+    border: none;
+    cursor: pointer;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+.box .inputBox input {
+    width: 366px;
+    height: 54px;
+    padding: 8px 0px 0px;
+    font-size: 18px;
+    margin: 1px 1px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
