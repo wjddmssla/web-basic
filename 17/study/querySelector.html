@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    a <input type="text" class="data-input"><br>
+    b <input type="text" class="data-input"><br>
+    c <input type="text" class="data-input"><br>
+    d <input type="text" class="data-input"><br>
+    e <input type="text" class="data-input"><br>
+    f <input type="text" class="data-input"><br>
+    g <input type="text" class="data-input"><br>
+    h <input type="text" class="data-input"><br>
+
+    <span class="index-text">1</span>
+    <input type="range" min="1" max="8" class="index-input">
+    <button type="button" class="ok-button">확인</button>
+
+    <script>
+        const dataInputs = document.querySelectorAll(".data-input");
+        const indexText = document.querySelector(".index-text");
+        const indexInput = document.querySelector(".index-input");
+        const okButton = document.querySelector(".ok-button");
+
+        okButton.onclick = () => {
+            let data = null;
+
+            data = dataInputs[indexInput.value - 1].value;
+            alert(data);
+        }
+
+        indexInput.onchange = () => {
+            indexText.textContent = indexInput.value;
+        }
+    </script>
+</body>
+</html>

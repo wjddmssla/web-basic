@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" class="back-button">뒤로가기</button>
+    <button type="button" class="forward-button">앞으로가기</button>
+    <button type="button" class="now-page-button">현재페이지 다시 열기</button>
+
+    <script>
+        const backButton = document.querySelector(".back-button");
+        const forwardButton = document.querySelector(".forward-button");
+        const nowPageButton = document.querySelector(".now-page-button");
+
+        backButton.onclick=() => {
+            history.back();
+        }
+
+        forwardButton.onclick=() => {
+            histroy.forward();
+        }
+
+        nowPageButton.onclick=() => {
+            location.replace=("#");
+        }
+    </script>
+</body>
+</html>

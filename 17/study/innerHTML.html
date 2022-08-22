@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Z, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        table {
+            margin-top: 20px;
+            border: 1px solid #141414;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th, td {
+            border: 1px solid #141414;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="user-info">
+        <div>
+            <input type="text" class="user-input" placeholder="이름을 입력하세요.">
+            <input type="tel" class="user-input" placeholder="연락처를 입력하세요.">
+            <button type="button" class="add-button">등록</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>연락처</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>김준일</td>
+                    <td>010-9988-1916</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const userInputs = document.querySelectorAll(".user-input");
+        const addButton = document.querySelector(".add-button");
+        const tableBody = document.querySelector("tbody");
+
+        let index = 1;
+
+        addButton.onclick = () => {
+            index++;
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${index}</td>
+                    <td>${userInputs[0].value}</td>
+                    <td>${userInputs[1].value}</td>
+                </tr>
+            `;
+        }
+    </script>
+</body>
+</html>

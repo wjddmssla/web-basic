@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        #contatiner {
+            margin: 50px auto;
+            width: 800px;
+        }
+
+        table{
+            border-collapse: collapse;
+            border: 1px solid #141414;
+
+            width: 100px;
+
+        }
+
+        th, td {
+            border: 1px solid #141414;
+            text-align: center;
+        }
+
+        td {
+            display: center;
+        }
+
+        td:hover {
+            background-color: #dbdbdb;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <tr>
+                <th>제목</th>
+            </tr>
+            <tr>
+                <td>1번글</td>
+            </tr>
+            <tr>
+                <td>2번글</td>
+            </tr>
+            <tr>
+                <td>3번글</td>
+            </tr>
+            <tr>
+                <td>4번글</td>
+            </tr>
+            <tr>
+                <td>5번글</td>
+            </tr>
+        </table>
+        <button type="button">리스트 추가</button>
+    </div>
+    <script>
+        let tdList=document.querySelector("td");
+        const table = document.querySelector("table");
+        const addButton = document.querySelector("button");
+
+        for(let td of tdList) {
+            td.onclick = () => {
+                alert(td.textContent);
+            }
+        }
+
+        addButton.onclick = () => {
+            for(let i=0; i< 10; i++) {
+            let tdLastNumber = tdList[tdList.length-1].tetContent.substring(0, tdLsit[tdList.length-1].textContent.indexOf("번"))
+            console.log(tdLastNumber)
+            table.innerHTML +=`
+                <tr>
+                    <td>${number(tdLastNumber) + 1 + i + "번 글"}</td>
+                </tr>
+            `
+            }
+        }
+
+        for(let i = 0; i<10; i++) {
+            let tdLastNumber = tdList[tdList/length-1].textContent.substring(0,1);
+            table.innerHTML += `
+                <tr>
+                    <td>${number(tdLastNumber) + 1 + i + "번 글"}</td>
+                </tr>
+            `;
+
+        }
+
+        tdList.document.querySelectorAll("td");
+
+        for(let td of tdList) {
+            td.onclick = () => {
+                alert(td.textContent);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일적용</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+
+            background: red;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+
+            background-color: blue;
+        }
+
+        .title-text{
+            color: gray;
+        }
+
+        .text-white{
+            color:white;
+        }
+
+        .visible {
+            display:none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1 class="title-text">스타일 속성 사용법</h1>
+    </div>
+    <div class="box2">
+        <h1 class="title-text">스타일 속성 사용법</h1>
+    </div>
+
+    <script>
+        const box1 = document.querySelector(".box1");
+        const box2 = document.querySelector(".box2");
+        //const titleText = document.querySelectorAll(".title-text");
+
+        box1.onclick = () => {
+            const titleText = box1.querySelector(".title-text");
+            console.log(titleText.classList);
+            titleText.classList.toggle("text-white");
+            box.classList.toggle("visible");
+        }
+
+        box2.onclick = () => {
+            const titleText = box2.querySelector(".title-text");
+            titleText.style.color="#ffffff";
+        }
+
+    </script>
+    
+</body>
+</html>

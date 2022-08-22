@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성</title>
+</head>
+<body>
+    <img src="/17/images/coffee-blue.jpg">
+    <button type="button" class="left-button">&lt;</button>
+    <button type="button" class="right-button">&gt;</button>
+
+    <script>
+        const coffeeImg = document.querySelector("img");
+        const leftButton = document.querySelector(".left-button");
+        const rightButton = document.querySelector(".right-button");
+
+        const prefix = "/17/images/";
+        const subfix = ".jpg";
+
+        let coffeeImgs = ["coffee-blue", "coffee-gray", "coffee-pink"];
+        let imgIndex=0;
+
+        coffeeImg.onclick = (event) => {
+            alert(`(${event.target.src})커피 이미지 입니다.`);
+        }
+
+        rightButton.onclick = () => {
+            if(imgIndex < coffeeImgs.length-1) {
+                imgIndex++;
+                coffeeImg.src = prefix + coffeeImgs[imgIndex] + subfix;
+            }else {
+                alert("마지막 사진입니다");
+            }
+        }
+
+        leftButton.oclick = () => {
+            if(imgIndex > 0) {
+                imgIndex--;
+                coffeeImg.src = prefix + coffeeImgs[imgIndex] + subfix;
+            }else {
+                alert("첫번째 사진입니다");
+            }
+        }
+
+
+    </script>
+</body>
+</html>

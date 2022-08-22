@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="data-input">
+    <button type="button" class="send-button">데이터 전송</button>
+
+    <script>
+        const dataInput = document.querySelector(".data-input");
+        const sendButton = document.querySelector(".send-button");
+
+        let printData = (data) => {  
+            // => : function (람다)
+            console.log("전송데이터: " + data);
+        }
+
+        let add = (a,b) => a+b;
+
+        sendButton.onclick = () => {
+            printData(dataInput.value);
+            let result = add(10, 20);
+            console.log("a+b=" +result);
+        }
+
+
+    </script>
+</body>
+</html>
