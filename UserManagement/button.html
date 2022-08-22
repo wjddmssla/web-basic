@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text">
+        <button type="button">클릭</button>
+        <input type="submit" value="전송버튼">
+    </form>
+
+    <script>
+        const button = document.querySelector("button");
+
+        button.onclick = () => {
+            alert("버튼을 클릭했습니다.");
+        }
+            // 'function' 대신에 '=>'를 쓴다
+         let testRun = () => {
+            alert("test1 함수 호출");
+        };
+
+        testRun();
+        
+    </script>
+</body>
+</html>

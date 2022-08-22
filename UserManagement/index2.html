@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>LIST</title>
+    </head>
+    <div class="user-info">
+        <h1>LIST</h1>
+        <div>
+            <input type="text" class="user-input" placeholder="아이디">
+            <input type="tel" class="user-input" placeholder="비밀번호">
+            <input type="text" class="user-input" placeholder="이름">
+            <input type="tel" class="user-input" placeholder="이메일">
+            <button type="button" class="add-button">저장</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>아이디</th>
+                    <th>비밀번호</th>
+                    <th>이름</th>
+                    <th>이메일</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</body>
+<script>
+
+    const userInputs = document.querySelectorAll(".user-input");
+        const addButton = document.querySelector(".add-button");
+        const tableBody = document.querySelector("tbody");
+
+        let index = 0;
+
+        addButton.onclick = () => {
+            index++;
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${index}</td>
+                    <td>${userInputs[0].value}</td>
+                    <td>${userInputs[1].value}</td>
+                </tr>
+            `;
+        }
+
+        </script>
+
+</body>
+</html>
